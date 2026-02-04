@@ -23,15 +23,17 @@
         margin-top: 15px;
         margin-bottom: 20px;
       }
-      #image {
-        max-width: 300px;  
-        max-height: 300px;  
-        object-fit: contain; 
-        display: block;
-        margin-top: 20px;
-        border: 1px solid #ccc; 
+      
+      #image-container {
         display: flex;
-        justify-content: center;
+        justify-content: center; /* centers image horizontally */
+      }
+
+      #image {
+        max-width: 300px;
+        max-height: 300px;
+        object-fit: contain;
+        border: 1px solid #ccc;
       }
     </style>
   </head>
@@ -44,7 +46,7 @@
       <button onClick="renderBox(3)">3</button>
     </div>
 
-    <div>
+    <div id="image-container">
       <img id="image" src="">
     </div>
     <script>
