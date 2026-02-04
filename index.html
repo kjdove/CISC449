@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>kjdove</title>
+    <style>
+      .button-row {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+       h2 {
+        text-align: center;
+      }
+
+      /* Button row styling */
+      .box-row {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 15px;
+        margin-bottom: 20px;
+      }
+      #image {
+        max-width: 300px;  
+        max-height: 300px;  
+        object-fit: contain; 
+        display: block;
+        margin-top: 20px;
+        border: 1px solid #ccc; 
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Choose a box</h2>
+    <div class="box-row">
+      <button onClick="renderBox(1)">1</button>
+      <button onClick="renderBox(2)">2</button>
+      <button onClick="renderBox(3)">3</button>
+    </div>
+
+    <div>
+      <img id="image" src="">
+    </div>
+    <script>
+      function renderBox(boxNum) {
+        const imageElement = document.getElementById('image');
+        let imageSrc = "";
+        switch(boxNum) {
+          case 1:
+            imageSrc = "spirit.png";
+            break;
+          case 2:
+            imageSrc = "snoopy.png";
+            break;
+          case 3:
+            imageSrc = "clancy.png"
+            break;
+          default: 
+            imageSrc = "";
+            alert("invalid box number");
+        }
+        imageElement.src = imageSrc;
+      }
+    </script>
+  </body>
+</html>
